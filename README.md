@@ -1,2 +1,2 @@
 # Randamizor
-Just Random stuff . Keep away
+Picks a winner b/w 2 images based on their on their popularity.
