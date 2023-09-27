@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Winner Picker</title>
+	<style>
+		/* CSS styles go here */
+	body {
+		background-color: black;
+		color: white;
+	}
+		#images {
+			display: flex;
+			justify-content: space-around;
+			margin: 50px 0;
+		}
+		.image-container {
+			width: 300px;
+			height: 300px;
+			overflow: hidden;
+			border: 2px solid black;
+		}
+		.image-container img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	</style>
+	<script>
+		// JavaScript code goes here
+		let image1, image2;
+
+		function pickWinner(image) {
+			if (image === 1) {
+				image1.style.border = '5px solid green';
+				image2.style.border = '2px solid black';
+			} else {
+				image2.style.border = '5px solid blue';
+				image1.style.border = '2px solid black';
+			}
+		}
+	</script>
+</head>
+<body>
+	<p>Were we let in for our looks ? No. Will we be judged on them ? Yes.</p>
+	<header>
+		<h1>Who's Hotter ?</h1>
+	</header>
+	
+	<main>
+		<div id="images">
+			<div class="image-container">
+				<img src="image1.jpg" alt="Image 1" onclick="pickWinner(1)">
+			</div>
+			<div class="image-container">
+				<img src="image2.jpg" alt="Image 2" onclick="pickWinner(2)">
+			</div>
+		</div>
+		<button onclick="alert('The winner is Image ' + (image1.style.border === '5px solid green' ? '1' : '2'))">Pick Winner</button>
+	</main>
+	<footer>
+		<p>&copy;NIET Profile Battle Exclusivley for Freshmen #GirlsHadEnough</p>
+	</footer>
+</body>
+</html>
