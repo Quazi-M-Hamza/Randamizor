@@ -1,2 +1,2 @@
 # Randamizor
-Picks a winner b/w 2 images based on their on their popularity.
+Picks a winner between two images based on their on their popularity.
